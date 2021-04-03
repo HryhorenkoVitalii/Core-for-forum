@@ -10,6 +10,7 @@
 
 <h4 align="center">Hacker News like forum</h4>
 Forum core with API data management
+
 ### Fast start
 
 To clone and run this application, you'll need [Git](https://git-scm.com). 
