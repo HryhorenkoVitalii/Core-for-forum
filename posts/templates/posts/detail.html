@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="columns">
+            <div class="column is-12">
+                <h1 class="title">{{ user_post.title }}</h1>
+                Link: <a href="{{ user_post.link }}" class="subtitles>"> {{ user_post.link }}</a>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column is-12">
+                <hr>
+
+                <h2 class="subtitle">Comments</h2>
+
+                {% for comment in user_post.comments.all %}
+                    <article class="media">
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <strong>{{ comment.author_name.username }}</strong><br>
+                                    {{ comment.body }}
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                {% empty %}
+                    <p>No comments yet!</p>
+                {% endfor %}
+
+                <hr>
+
+                <h2 class="subtitle">Add comment</h2>
+
+                {% if request.user.is_authenticated %}
+                    <form method="post" action=".">
+                        {% csrf_token %}
+
+                        {{ form.as_p }}
+
+                        <div class="field">
+                            <div class="field">
+                                <button class="button is-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                {% else %}
+                    <p>Please log in to comment!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

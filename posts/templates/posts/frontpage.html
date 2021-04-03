@@ -1,0 +1,34 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="columns">
+            <div class="column is-12">
+                <h1 class="title">Core for forum</h1>
+            </div>
+        </div>
+
+        <div class="columns">
+            <div class="column is-12">
+                <table class="table is-striped">
+                    <tbody>
+                        {% for post in posts %}
+                            <tr>
+                                <td>{{ forloop.counter }}</td>
+                                <td>
+                                    <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+                                    <p>
+                                        {{ post.amount_of_upvotes }} votes | Created by {{ post.author_name }} |
+                                        {% if not post.author_name == request.user %}
+                                            <a href="{% url 'vote' post.id%}">Vote</a>
+                                        {% endif %}
+                                        <a href="{% url 'details' post.id %}">Comments</a>
+                                    </p>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+{% endblock %}
