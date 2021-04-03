@@ -1,7 +1,7 @@
 
 <h1 align="center">
    <br>
-  <a><img src="https://img.icons8.com/ios/452/hacker-news.png" alt="DevelopersToday" width="250"></a>
+  <a><img src="https://img.icons8.com/ios/452/hacker-news.png" width="250"></a>
   <br>
   <br>
   Forum core
@@ -9,7 +9,7 @@
 </h1>
 
 <h4 align="center">Hacker News like forum</h4>
-
+Forum core with API data management
 ### Fast start
 
 To clone and run this application, you'll need [Git](https://git-scm.com). 
@@ -17,19 +17,16 @@ From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/HryhorenkoVitalii/Django-Haker-news-core.git
-
-# Go into the repository
-$ cd Django-API-TestTask
+$ git clone https://github.com/HryhorenkoVitalii/Core-for-forum.git
 
 
 ```
 ### Request
 ####   For requests to deployed server you're need use url `http://127.0.0.1:8000`
-#### You can use `curl` or [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/907f4883dc56d8162103#?env%5Bcollections_for_developstoday%5D=W3sia2V5IjoibG9jYWwiLCJ2YWx1ZSI6ImxvY2FsIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifSx7ImtleSI6InNlcnZlciIsInZhbHVlIjoic2VydmVyIiwiZW5hYmxlZCI6dHJ1ZSwidHlwZSI6InRleHQifV0=)
+#### You can use `curl` 
 * To create new item in database you're need:
 
-### Endpoints
+### API endpoints
 ```bash
 # GET to view all users, POST to creae new.
 /api/v1/user/
