@@ -1,7 +1,7 @@
 
 <h1 align="center">
    <br>
-  <a href="https://s.dou.ua/CACHE/images/img/static/companies/develops-logo/"><img src="https://s.dou.ua/CACHE/images/img/static/companies/develops-logo/ff10e32a80991c6a634119ccc795c174.png" alt="DevelopersToday" width="250"></a>
+  <a><img src="https://img.icons8.com/ios/452/hacker-news.png" alt="DevelopersToday" width="250"></a>
   <br>
   <br>
   Forum core
