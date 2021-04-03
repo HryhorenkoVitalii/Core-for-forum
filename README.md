@@ -22,10 +22,6 @@ $ git clone https://github.com/HryhorenkoVitalii/Core-for-forum.git
 
 
 ```
-### Request
-####   For requests to deployed server you're need use url `http://127.0.0.1:8000`
-#### You can use `curl` 
-* To create new item in database you're need:
 
 ### API endpoints
 ```bash
